@@ -7,6 +7,7 @@ git checkout main //main 브랜치로 이동
 git checkout {특정 브랜치 이름} //특정 브랜치 이름으로 이동
 git checkout -b {브랜치} //브랜치 생성
 git branch //branch 목록 보기, 현재 branch에 *표시
+git branch -d {브랜치} //브랜치 삭제
 git push origin {브랜치} //브랜치를 origin에 푸시
 ```
 
