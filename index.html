@@ -14,12 +14,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>종합검색</h1>
-    <form>
-      <input type="button" id="erase" value="x" />
-      <input type="text" id="search" required />
-      <input type="submit" id="google" value="구글 검색" />
-    </form>
-    <script src="app.js"></script>
+    <div class="search">
+      <h1>종합검색</h1>
+      <form>
+        <div>
+          <input type="text" id="search" required />
+          <input type="button" id="erase" value="x" />
+        </div>
+        <div class="search-button">
+          <input type="submit" id="google" value="구글" />
+          <input type="submit" id="naver" value="네이버" />
+        </div>
+      </form>
+      <script src="app.js"></script>
+    </div>
   </body>
 </html>
