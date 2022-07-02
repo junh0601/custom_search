@@ -17,6 +17,7 @@ header {
 .seachInput{
     width : 100%;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -46,8 +47,6 @@ header {
 }
 
 #erase{
-    position:relative;
-    right: 35px;
     border: 0;
     background-color: rgba(0,0,0,0);
     font-size: large;
