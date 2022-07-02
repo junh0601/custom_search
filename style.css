@@ -17,7 +17,6 @@ header {
 .seachInput{
     width : 100%;
     display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -31,7 +30,7 @@ header {
 }
 
 #search-bar {
-    width : 50vw;
+    width : 80vw;
     height : 30px;
     padding : 5px;
     padding-left: 15px;
@@ -39,7 +38,7 @@ header {
     border: 0px;
     border-radius: 17.5px;
     font-weight: bolder;
-    font-size: large;
+    font-size: larger;
 }
 
 .searchButton {
@@ -51,14 +50,15 @@ header {
     background-color: rgba(0,0,0,0);
     font-size: large;
     font-weight: bolder;
-    color: black;
+    color: white;
 }
 
 .searchButton_btn{
-    border-radius: 5px;
+    border-radius: 10px;
     border: 0px;
     width : 100px;
-    background-color: whitesmoke;
-    color : green;
+    background-color: gray;
+    color : white;
     font-weight: bolder;
+    font-size: larger;
 }
