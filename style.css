@@ -30,7 +30,7 @@ header {
 }
 
 #search-bar {
-    width : 50%;
+    width : 50vw;
     height : 30px;
     padding : 5px;
     padding-left: 15px;
@@ -52,6 +52,7 @@ header {
     background-color: rgba(0,0,0,0);
     font-size: large;
     font-weight: bolder;
+    color: black;
 }
 
 .searchButton_btn{
