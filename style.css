@@ -50,6 +50,8 @@ header {
     right: 35px;
     border: 0;
     background-color: rgba(0,0,0,0);
+    font-size: large;
+    font-weight: bolder;
 }
 
 .searchButton_btn{
