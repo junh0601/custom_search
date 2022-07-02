@@ -16,19 +16,29 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="search">
+    <header>
       <h1>종합검색</h1>
-      <form>
-        <div>
-          <input type="text" id="search" required />
+      <form class="searchForm">
+        <div class="seachInput">
+          <input type="text" id="search-bar" required />
           <input type="button" id="erase" value="x" />
         </div>
-        <div class="search-button">
-          <input type="submit" id="google" value="구글" />
-          <input type="submit" id="naver" value="네이버" />
+        <div class="searchButton">
+          <input
+            type="submit"
+            class="searchButton_btn"
+            id="google"
+            value="구글"
+          />
+          <input
+            type="submit"
+            class="searchButton_btn"
+            id="naver"
+            value="네이버"
+          />
         </div>
       </form>
       <script src="app.js"></script>
-    </div>
+    </header>
   </body>
 </html>

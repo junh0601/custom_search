@@ -1,4 +1,4 @@
-const search = document.querySelector("#search");
+const search = document.querySelector("#search-bar");
 const google = document.querySelector("#google");
 const naver = document.querySelector("#naver");
 const erase = document.querySelector("#erase");
