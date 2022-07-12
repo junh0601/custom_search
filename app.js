@@ -2,7 +2,6 @@ import {query} from "./url.js"
 
 let q = "";
 const search = document.querySelector("#search-bar");
-const erase = document.querySelector("#erase");
 const searchButton = document.querySelector("#searchButton");
 
 query.forEach((item)=>{
@@ -37,9 +36,4 @@ buttons.forEach((item) => {
 });
 
 
-erase.addEventListener("click", ()=> {
-    search.value = "";
-    search.placeholder = "Search";
-    }
-);
 
