@@ -7,38 +7,34 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="apple-mobile-web-app-title" content="이준혁" />
+    <meta name="apple-mobile-web-app-title" content="Search" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.8.0/mvp.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Search</title>
+    <title>Search</title>
   </head>
   <body>
     <header>
-      <h1>종합검색</h1>
-      <form class="searchForm">
-        <div class="seachInput">
-          <input type="text" id="search-bar" required />
-          <input type="button" id="erase" value="X" />
-        </div>
-        <div class="searchButton">
+      <small>Personalized Search </small>
+      <form id="searchForm">
+        <div id="seachInput">
           <input
-            type="submit"
-            class="searchButton_btn"
-            id="google"
-            value="구글"
+            type="text"
+            id="search-bar"
+            placeholder="Search"
+            required
+            autofocus
           />
-          <input
-            type="submit"
-            class="searchButton_btn"
-            id="naver"
-            value="네이버"
-          />
+          <input type="button" id="erase" value="❎" />
         </div>
+        <div id="searchButton"></div>
       </form>
-      <script src="app.js"></script>
+      <script type="module" src="app.js"></script>
+      <footer>&copy 2022 · github.com/junh0601</footer>
     </header>
   </body>
 </html>

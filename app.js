@@ -1,36 +1,45 @@
+import {query} from "./url.js"
+
+let q = "";
 const search = document.querySelector("#search-bar");
-const google = document.querySelector("#google");
-const naver = document.querySelector("#naver");
 const erase = document.querySelector("#erase");
-const required = document.querySelector("#required");
+const searchButton = document.querySelector("#searchButton");
 
+query.forEach((item)=>{
+    const span = document.createElement("span");
+    const input = document.createElement("input");
+    input.value = (item.isShortcut)? `🌐${item.site}` : item.site ;
+    input.id = item.site;
+    input.type = "button";
+    input.classList.add("button");
+    span.appendChild(input);
+    searchButton.appendChild(span);
+})
 
-function openUrl(link) {
-    if (search.value == ""){
-        search.placeholder="검색어를 입력하세요"
-    }else{
-        location.href = link;
-    }
+function searchUrl(item){
+    query.forEach((q)=> {
+        if(q.site===item.id){
+            if(q.isShortcut){
+                return location.href = q.url;
+            }else if (search.value===""){
+                return search.placeholder="검색어를 입력하세요";
+            }
+            const link = q.url+search.value
+            location.href = link;
+        }
+    })
 }
 
-function handleNaver(event) {
-    event.preventDefault();
-    const searchLink = `https://search.naver.com/search.naver?ie=UTF-8&query=${search.value}`;
-    openUrl(searchLink);
-}
+const buttons = document.querySelectorAll(".button");
 
-function handleGoogle(event) {
-    event.preventDefault();
-    const searchLink = `https://www.google.com/search?q=${search.value}`;
-    openUrl(searchLink);
-}
+buttons.forEach((item) => {
+    item.addEventListener("click", function(){searchUrl(item)})
+});
 
-function handleErase() {
+
+erase.addEventListener("click", ()=> {
     search.value = "";
-}
+    search.placeholder = "Search";
+    }
+);
 
-
-
-erase.addEventListener("click", handleErase);
-google.addEventListener("click", handleGoogle);
-naver.addEventListener("click", handleNaver);
