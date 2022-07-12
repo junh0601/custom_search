@@ -12,6 +12,10 @@
     width : 70vw;
 }
 
+#input[type=text]:-ms-clear{
+    
+}
+
 #erase{
     background-color: rgba( 255, 255, 255, 0 );
 }
