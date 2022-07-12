@@ -24,7 +24,7 @@ export const query = [
     },
     {
         site : "사전",
-        url : "https://dict.naver.com/search.dict?dicQuery=",
+        url : "https://m.search.naver.com/search.naver?where=m_ldic&sm=mtb_jum&query=",
         isShortcut : false,
     },
     {
