@@ -47,4 +47,10 @@ export const query = [
         url : "https://weather.naver.com",
         isShortcut : true,
     },
+    {
+        site : "식단", 
+        url : "http://m.welliv.co.kr/mobile/mealmenu_list.jsp",
+        isShortcut : true,
+    },
 ]
+
