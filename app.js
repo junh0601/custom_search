@@ -29,8 +29,8 @@ function searchUrl(item){
     })
 }
 
-function defaultSearch(event){
-    searchUrl(deafaultQ);
+function defaultSearch(){
+    location.href = "https://www.google.com/search?q="+search.value
 }
 
 
@@ -39,7 +39,6 @@ function defaultSearch(event){
 search.addEventListener("submit", defaultSearch); 
 
 const buttons = document.querySelectorAll(".button");
-const deafaultQ = document.querySelector("구글");
 
 
 buttons.forEach((item) => {
