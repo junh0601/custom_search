@@ -1,14 +1,17 @@
-import {query} from "./url.js"
+import {searchQ} from "./url.js"
 
 let q = "";
 const search = document.querySelector("#search-bar");
 const searchButton = document.querySelector("#searchButton");
+const buttons = document.querySelectorAll(".button");
+const deafaultSearch = document.querySelector("구글");
 
-query.forEach((item)=>{
+//쿼리 내에 아이템을 버튼으로 노출
+searchQ.forEach((item)=>{
     const span = document.createElement("span");
     const input = document.createElement("input");
     input.value = (item.isShortcut)? `🌐${item.site}` : item.site ;
-    input.id = item.site;
+    input.id = item.site; //각 버튼의 id는 사이트의 이름으로 설정됨
     input.type = "button";
     input.classList.add("button");
     span.appendChild(input);
@@ -16,7 +19,7 @@ query.forEach((item)=>{
 })
 
 function searchUrl(item){
-    query.forEach((q)=> {
+    searchQ.forEach((q)=> {
         if(q.site===item.id){
             if(q.isShortcut){
                 return location.href = q.url;
@@ -29,11 +32,17 @@ function searchUrl(item){
     })
 }
 
-const buttons = document.querySelectorAll(".button");
+function defaultSearch(event){
+    event.preventDefault();
+    searchUrl(deafaultSearch);
+}
+
+
+
+
+search.addEventListener("submit", defaultSearch); 
+
 
 buttons.forEach((item) => {
     item.addEventListener("click", function(){searchUrl(item)})
 });
-
-
-

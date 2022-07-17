@@ -11,46 +11,46 @@
 
 */
 
-export const query = [
+export const searchQ = [
     {
         site : "구글",
         url : "https://www.google.com/search?q=",
-        isShortcut : false,
+        isShortcut : false
     },
     {
         site : "네이버",
         url : "https://search.naver.com/search.naver?ie=UTF-8&query=",
-        isShortcut : false,
+        isShortcut : false
     },
     {
         site : "사전",
         url : "https://m.search.naver.com/search.naver?where=m_ldic&sm=mtb_jum&query=",
-        isShortcut : false,
+        isShortcut : false
     },
     {
         site : "이미지", 
         url : "https://www.google.com/search?tbm=isch&q=",
-        isShortcut : false,
+        isShortcut : false
     }, 
     {
         site : "앱스토어", 
         url : "itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term={query}itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=",
-        isShortcut : false,
+        isShortcut : false
     },
     {
         site : "카카오맵", 
         url : "https://map.kakao.com/?q=",
-        isShortcut : false,
+        isShortcut : false
     },
     {
         site : "날씨", 
         url : "https://weather.naver.com",
-        isShortcut : true,
+        isShortcut : true
     },
     {
         site : "식단", 
         url : "http://m.welliv.co.kr/mobile/mealmenu_list.jsp",
-        isShortcut : true,
-    },
+        isShortcut : true
+    }
 ]
 
