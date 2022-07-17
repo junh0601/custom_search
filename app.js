@@ -3,9 +3,6 @@ import {searchQ} from "./url.js"
 let q = "";
 const search = document.querySelector("#search-bar");
 const searchButton = document.querySelector("#searchButton");
-const buttons = document.querySelectorAll(".button");
-const deafaultQ = document.querySelector("구글");
-
 //쿼리 내에 아이템을 버튼으로 노출
 searchQ.forEach((item)=>{
     const span = document.createElement("span");
@@ -40,6 +37,9 @@ function defaultSearch(event){
 
 
 search.addEventListener("submit", defaultSearch); 
+
+const buttons = document.querySelectorAll(".button");
+const deafaultQ = document.querySelector("구글");
 
 
 buttons.forEach((item) => {
