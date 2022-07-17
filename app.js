@@ -29,18 +29,18 @@ function searchUrl(item){
     })
 }
 
-function defaultSearch(){
-    location.href = "https://www.google.com/search?q="+search.value
+function defaultSearch(event){
+    event.preventDefault();
+    location.href = "https://www.google.com/search?q="
 }
 
 
-
-
+const buttons = document.querySelectorAll(".button");
 search.addEventListener("submit", defaultSearch); 
 
-const buttons = document.querySelectorAll(".button");
-
-
 buttons.forEach((item) => {
-    item.addEventListener("click", function(){searchUrl(item)})
+    item.addEventListener("click", (event)=>{
+        event.preventDefault();
+        searchUrl(item)})
 });
+
