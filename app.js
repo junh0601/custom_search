@@ -4,7 +4,7 @@ let q = "";
 const search = document.querySelector("#search-bar");
 const searchButton = document.querySelector("#searchButton");
 const buttons = document.querySelectorAll(".button");
-const deafaultSearch = document.querySelector("구글");
+const deafaultQ = document.querySelector("구글");
 
 //쿼리 내에 아이템을 버튼으로 노출
 searchQ.forEach((item)=>{
@@ -33,8 +33,7 @@ function searchUrl(item){
 }
 
 function defaultSearch(event){
-    event.preventDefault();
-    searchUrl(deafaultSearch);
+    searchUrl(deafaultQ);
 }
 
 
